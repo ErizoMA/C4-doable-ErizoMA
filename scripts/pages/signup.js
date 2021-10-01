@@ -19,7 +19,9 @@ const Signup = (()=>{
       <a href="#" class="">Login</a>
     </form>
   </main>
-    `
+    `,    initListeners:()=>{
+
+    }
   }
 })();
 

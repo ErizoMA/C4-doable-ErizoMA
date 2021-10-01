@@ -1,8 +1,8 @@
 import { apiFetch } from "./api_fetch.js";
 
-const TaskFetcher = (function(){
+export const TaskFetcher = (function(){
   return {
-    create:(title,dueDate)=>{
+    create:(title,dueDate)=>
       apiFetch(
         "tasks",
         "POST",
@@ -12,8 +12,8 @@ const TaskFetcher = (function(){
         },
         {title,due_date:dueDate}
       )
-    },
-    show:(id)=>{
+    ,
+    show:(id)=>
       apiFetch(
         `tasks/${id}`,
         "GET",
@@ -21,8 +21,8 @@ const TaskFetcher = (function(){
           Authorization: `Token token=${sessionStorage.getItem("token")}`
         },
       )
-    },
-    edit:(title,dueDate,important,completed,id)=>{
+    ,
+    edit:(title,dueDate,important,completed,id)=>
       apiFetch(
         `tasks/${id}`,
         "PATCH",
@@ -32,8 +32,8 @@ const TaskFetcher = (function(){
         },
         {title,due_date:dueDate,important,completed}
       )
-    },
-    list:()=>{
+    ,
+    index:()=>
       apiFetch(
         "tasks",
         "GET",
@@ -41,8 +41,8 @@ const TaskFetcher = (function(){
           Authorization: `Token token=${sessionStorage.getItem("token")}`
         },
       )
-    },
-    delete:(id)=>{
+    ,
+    delete:(id)=>
       apiFetch(
         `tasks/${id}`,
         "DELETE",
@@ -50,7 +50,7 @@ const TaskFetcher = (function(){
           Authorization: `Token token=${sessionStorage.getItem("token")}`
         },
       )
-    },
+    ,
 
   }
 })();

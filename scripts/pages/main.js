@@ -53,7 +53,8 @@ const Main = (()=>{
       <button class="text-base" type="submit">Add Task</button>
     </form>
   </main>
-    `
+    `,    initListeners:()=>{
+    }
   }
 })();
 

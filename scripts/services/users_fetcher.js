@@ -2,7 +2,7 @@ import { apiFetch } from "./api_fetch.js";
 
 export const UserFetcher =(function(){
   return {
-    create: (email,password) =>{
+    create: (email,password) =>
       apiFetch(
         "signup",
         "POST",
@@ -11,16 +11,14 @@ export const UserFetcher =(function(){
         },
         {email,password}
       )
-
-    },
-    delete: () =>{
-      "profile",
+    ,
+    delete: () =>apiFetch(
+           "profile",
       "DELETE",
       {
         Authorization: `Token token=${sessionStorage.getItem("token")}`
-      }
+      },
+    )
 
     }
-  }
-  
 })();

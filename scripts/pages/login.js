@@ -9,7 +9,6 @@ const Login = (()=>{
   async function loginUser(e){
     e.preventDefault();
     const {email,password} = e.target;
-    console.log(email.value,password.value);
     try{
       const userData = await SessionsFetcher.login(email.value,password.value);
       STORE.setUserData(userData);
@@ -22,7 +21,7 @@ const Login = (()=>{
       alert(e);
     }
   }
-  function createAccount(e){
+  function redirectSignup(e){
     DOMHandler.render(Signup)
   }
   return {
@@ -51,7 +50,7 @@ const Login = (()=>{
       form.addEventListener("submit",loginUser)
 
       const anchor = document.querySelector(".js-anchor")
-      anchor.addEventListener("click",createAccount)
+      anchor.addEventListener("click",redirectSignup)
     }
   }
 })();

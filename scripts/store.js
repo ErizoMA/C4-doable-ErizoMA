@@ -13,6 +13,10 @@ const STORE = (function(){
     tasks = listoftasks;
   }
 
+  function getTask(id){
+    return tasks.find((task) => task.id === id)
+  }
+
   function getTasks(){
     return [...tasks]
   }
@@ -21,7 +25,8 @@ const STORE = (function(){
     setUserData,
     getUserData,
     setTasks,
-    getTasks
+    getTasks,
+    getTask
   }
 })();
 

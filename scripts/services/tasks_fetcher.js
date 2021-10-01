@@ -22,15 +22,16 @@ export const TaskFetcher = (function(){
         },
       )
     ,
-    edit:(title,dueDate,important,completed,id)=>
+    edit:(id,options)=>
       apiFetch(
         `tasks/${id}`,
         "PATCH",
-        {
+        { 
           "Content-Type": "application/json",
           Authorization: `Token token=${sessionStorage.getItem("token")}`
         },
-        {title,due_date:dueDate,important,completed}
+        options
+        // {title,due_date:dueDate,important,completed}
       )
     ,
     index:()=>

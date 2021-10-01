@@ -1,5 +1,5 @@
-// import { SessionsFetcher } from "./services/sessions_fetcher.js";
+import DOMHandler from "./dom_handler.js";
+import Login from "./pages/login.js";
+import Signup from "./pages/signup.js";
 
-import { UserFetcher } from "./services/users_fetcher.js";
-
-UserFetcher.create("erizo4@mail.com","123456")
+DOMHandler.render(Login);

@@ -1,0 +1,13 @@
+:root {
+  --gray-700: #374151;
+  --gray-500: #6b7280;
+  --pink-500: #ec4899;
+  --gray-900: #111827;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

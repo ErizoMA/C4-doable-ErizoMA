@@ -1,0 +1,20 @@
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-base {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.f-normal {
+  font-weight: 400;
+}
+
+.f-medium {
+  font-weight: 500;
+}
+.f-semibold {
+  font-weight: 600;
+}

@@ -12,8 +12,8 @@ const Signup = (()=>{
       const userData = await UserFetcher.create(email.value,password.value)
       STORE.setUserData(userData);
       sessionStorage.setItem("token",userData.token);
-      const allTasks = await TaskFetcher.index();
-      STORE.setTasks(allTasks)
+      // const allTasks = await TaskFetcher.index();
+      // STORE.setTasks(allTasks)
       DOMHandler.render(Main)
     }catch(e){
       console.log(e);

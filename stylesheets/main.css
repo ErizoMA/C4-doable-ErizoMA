@@ -33,9 +33,15 @@
   display: flex;
   flex-direction: column;
   min-height: 330px;
+  gap: 12px;
 }
 .task {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.task-list p {
+  text-align: center;
+  margin-top: -15px;
 }

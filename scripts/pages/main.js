@@ -7,6 +7,7 @@ import Login from "./login.js";
 
 const Main = (() => {
   let tasks;
+  let originalTasks;
   function generateTasks() {
     const tasks = STORE.getTasks();
     return tasks.map((task) => new Task(task));
@@ -32,9 +33,6 @@ const Main = (() => {
       } catch (e) {
         console.log(e);
       }
-      // const taskData =
-      // console.log(taskData)
-      // e.preventDefault()
     }
   }
 
@@ -59,8 +57,8 @@ const Main = (() => {
           </div>
           <div class="show">
             <p>Show</p>
-            <input id="pending" type="checkbox" />
-            <label for="pending">Only pending</label>
+            <input  id="pending" type="checkbox" />
+            <label class="js-pending" data-id="false" for="pending">Only pending</label>
             <input id="important" type="checkbox" />
             <label for="important">Only important</label>
           </div>
@@ -90,6 +88,7 @@ const Main = (() => {
 
       const form = document.querySelector(".js-form");
       form.addEventListener("submit", createTask);
+
     },
   };
 })();

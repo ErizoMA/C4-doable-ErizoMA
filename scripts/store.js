@@ -24,13 +24,18 @@ const STORE = (function(){
     tasks = [...tasks,task]
   }
 
+  function getOnlyPending(){
+    return [...tasks].filter(task=> task.completed===false )
+  }
+
   return {  
     setUserData,
     getUserData,
     setTasks,
     getTasks,
     getTask,
-    createTask
+    createTask,
+    getOnlyPending
   }
 })();
 

@@ -10,13 +10,14 @@ const Task = function (task) {
       <img class="js-completed-${task.id}" src="./assets/icons/${
       task.completed ? "check" : "uncheck"
     }.svg" alt="completed" />
-      <label for="${task.id}">${task.title}</label>
+      <label class= "text-base f-semibold"for="${task.id}">${task.title}</label>
       <img data-id="${task.id}" class="js-task-${
       task.id
     }" src="./assets/icons/${
       task.important ? "important" : "not-important"
     }.svg" alt="importance" />
     </div>
+    <p class="text-sm f-normal">${task.due_date}</p>
     `;
   }),
     (this.initListeners = () => {

@@ -20,13 +20,17 @@ const STORE = (function(){
   function getTasks(){
     return [...tasks]
   }
+  function createTask(task){
+    tasks = [...tasks,task]
+  }
 
   return {  
     setUserData,
     getUserData,
     setTasks,
     getTasks,
-    getTask
+    getTask,
+    createTask
   }
 })();
 

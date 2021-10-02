@@ -23,7 +23,7 @@ const Main = (()=>{
           <div class="sort">
             <p>Sort</p>
             <select name="" id="">
-              <option value="">A-Z</option>
+              <option value="">Alphabetic (a-z)</option>
               <option value="">Due-date</option>
               <option value="">Importance</option>
             </select>
